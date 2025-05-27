@@ -1,0 +1,281 @@
+/* styles.css */
+
+/* =============================
+   1. CSS Reset and Base Styles
+   ============================= */
+
+/* Universal selector: reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element selector: style all <h2> */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* =============================
+   2. Header Styles
+   ============================= */
+
+/* ID selector: #mainHeader for banner */
+#mainHeader {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  /* Background image fallback */
+  background-image: url('../images/banner-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* =============================
+   3. Event Card Styles
+   ============================= */
+
+/* Class selector: .eventCard for event containers */
+.eventCard {
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+/* =============================
+   4. Grouping Selectors
+   ============================= */
+
+/* Grouping h3 and p for styling */
+h3, p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+/* =============================
+   5. Body Background (embedded style example)
+   ============================= */
+/* 
+Place this inside <style> in the <head> of your HTML file for embedded styles:
+
+<style>
+  body {
+    background: #f5f9ff;
+  }
+</style>
+
+*/
+
+/* =============================
+   6. Links and List Styling
+   ============================= */
+
+a {
+  color: #007bff; /* HEX */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgba(0, 123, 255, 0.7); /* RGBA */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551A8B;
+}
+
+a:active {
+  color: #004085;
+}
+
+/* Navigation list styling */
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  padding-left: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  padding: 0.3rem 0;
+}
+
+/* =============================
+   7. Table Styling
+   ============================= */
+
+/* Style for events admin table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+}
+
+th {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: white;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9f5ff; /* Zebra striping */
+}
+
+/* =============================
+   8. Box Model and Form Styles
+   ============================= */
+
+input, select, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Outline to highlight selected input fields */
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #007bff;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Comparison of visibility */
+/* 
+.hidden {
+  visibility: hidden; // Element occupies space but is invisible
+}
+
+.none {
+  display: none; // Element removed from layout flow
+}
+*/
+
+/* Example eventCard spacing */
+.eventCard {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+}
+
+/* =============================
+   9. Multi-column Text Example
+   ============================= */
+
+/* News article section */
+.newsArticle {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: 0.3rem;
+}
+
+/* =============================
+   10. Responsive Design with Media Queries
+   ============================= */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .eventCard {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsArticle {
+    column-count: 1;
+  }
+
+  /* Reduce image sizes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* =============================
+   11. Google Fonts Import
+   ============================= */
+
+/* Put this at the very top of your CSS file */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+
+/* =============================
+   12. Inline style example
+   ============================= */
+
+/* Example for HTML:
+<h1 style="color: red;">This heading is red by inline style</h1>
+*/
+
+/* =============================
+   13. Button styles
+   ============================= */
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* =============================
+   14. Footer styles
+   ============================= */
+
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
